@@ -32,6 +32,14 @@ header h2{
     text-align: left;
 }
 
+.bottomscreen { 
+    color: #ffa648;
+    position: absolute; 
+    bottom: 0px; 
+    left: 0px; 
+    font-size: 25px;
+    z-index: 100;
+}
 
     #threedee {
         color: #FFFFFF;

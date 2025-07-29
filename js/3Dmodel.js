@@ -1,6 +1,6 @@
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, 750 / 500, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(50, 750 / 500, 0.1, 1000);
 
 const threedeeDiv = document.getElementById('threedee');
 
@@ -9,29 +9,27 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(1920, 1920);
 threedeeDiv.appendChild(renderer.domElement);
 
-const ambientLight = new THREE.AmbientLight('rgba(243, 241, 220, 1)', 1); 
+const ambientLight = new THREE.AmbientLight('rgba(250, 237, 193, 1)', 1); 
 scene.add(ambientLight);
 
-let rotation1 = false; // Flag to control rotation
-let rotation2 = false; // Flag to control rotation
-let rotation3 = false; // Flag to control rotation
-let rotation4 = false; // Flag to control rotation
-
-//I don't know why we needed two, feel free to add it again<3
-// const ambientLightTwo = new THREE.AmbientLight('rgb(255, 255, 255)', 0.3); 
-// scene.add(ambientLightTwo);
+// Flag to control rotation
+let rotation1 = false; 
+let rotation2 = false;
+let rotation3 = false; 
+let rotation4 = false; 
 
 const loader = new THREE.GLTFLoader();
+
 let model;
 
-
-
+//loading the 3D model/
 loader.load('3Dmodel/skingrafting.glb', function (gltf) {
     model = gltf.scene;
     scene.add(model);
 
-    //maybe we can have buttons to adjust the height of the viewpoint/
-     model.position.set(2, -1, -11.2);
+    //coordonates of model, its scale, and camera position/
+    model.position.set(2, -2, -12.2);
+    model.rotation.set(0.2, 0, 0);
     model.scale.set(0.1, 0.1, 0.1);
     
     camera.position.set(1, -4, 1);
@@ -107,7 +105,7 @@ function animate() {
  }
  if (rotation2) {
     //model.rotation.axis += (goalangle - model.rotation.axis) * speed
-     model.rotation.x += (2 - model.rotation.x) * 0.03;
+     model.rotation.x += (4 - model.rotation.x) * 0.03;
  }
    if (rotation3) {
     model.rotation.y += (-3 -  model.rotation.y) * 0.05;
@@ -115,8 +113,8 @@ function animate() {
    if (rotation4) {
     model.rotation.y -= 0.01;
  } else {
+    model.rotation.x += (0.2 -  model.rotation.x) * 0.05;
     model.rotation.y += (0 -  model.rotation.y) * 0.05;
-    model.rotation.x += (0 -  model.rotation.x) * 0.05;
     model.rotation.z += (0 -  model.rotation.z) * 0.05;
  } 
     renderer.render(scene, camera);
