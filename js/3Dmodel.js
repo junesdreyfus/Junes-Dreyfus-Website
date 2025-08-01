@@ -28,11 +28,8 @@ threedeeDiv.appendChild(renderer.domElement);
         }  ;
 
 //ambient light
-
 const ambientLight = new THREE.AmbientLight('rgba(255, 255, 255, 1)', station.light1); 
 scene.add(ambientLight);
-
-
 
 // boolean to control rotation
 let rotation1 = false; 
@@ -43,8 +40,6 @@ let rotation4 = false;
 const loader = new THREE.GLTFLoader();
 
 let model;
-
-
 
 //loading the 3D model/
 loader.load('3Dmodel/skingrafting.glb', function (gltf) {
