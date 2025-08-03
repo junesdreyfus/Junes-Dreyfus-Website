@@ -7,6 +7,8 @@ const renderer = new THREE.WebGLRenderer({antialias : true});
 
 //3D window size (scales the model!!!)
 
+//3D window size (scales the model!!!)
+
 renderer.setSize(1920, 1920);
 threedeeDiv.appendChild(renderer.domElement);
 
@@ -46,7 +48,6 @@ loader.load('3Dmodel/skingrafting.glb', function (gltf) {
     model = gltf.scene;
     scene.add(model);
  
-
 
     //coordonates of model, its scale, and camera position/
     model.position.set(station.posx, station.posy, station.posz);
@@ -176,3 +177,4 @@ resetmodel();
 //   y: THREE.MathUtils.radToDeg(model.rotation.y),
 //   z: THREE.MathUtils.radToDeg(model.rotation.z)
 // });
+
