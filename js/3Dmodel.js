@@ -27,11 +27,15 @@ threedeeDiv.appendChild(renderer.domElement);
         scaz : 0.1,
 
         light1 : 1.3,
+
+        bgred : 0,
         }  ;
 
 //ambient light
 const ambientLight = new THREE.AmbientLight('rgba(255, 255, 255, 1)', station.light1); 
 scene.add(ambientLight);
+scene.background = new THREE.Color('rgba(0, 0, 0, 1)'); // Replace with your desired hex color
+
 
 // boolean to control rotation
 let rotation1 = false; 
@@ -70,13 +74,7 @@ loader.load('3Dmodel/skingrafting.glb', function (gltf) {
         }
     });
 
-    const cubeTextureLoader = new THREE.CubeTextureLoader();
-    const envMap = cubeTextureLoader.load([
-        'px.jpg', 'nx.jpg',
-        'py.jpg', 'ny.jpg',
-        'pz.jpg', 'nz.jpg'
-    ]);
-    scene.environment = envMap;
+
      animate();
 }, undefined, function (error) {
     console.error(error);
@@ -169,6 +167,14 @@ resetmodel();
     });
      document.getElementById("button4").addEventListener(event, () => {
         rotation4 = !rotation4;
+    });
+});
+
+["click"].forEach(event => {
+     
+  //triggers rotation each time mouse hover in or out.
+    document.getElementById("button1").addEventListener(event, () => {
+       scene.background = new THREE.Color('rgba(255, 0, 0, 1)'); ;
     });
 });
 

@@ -40,7 +40,7 @@ header{
  h2{
     float: left;
     color: rgb(254, 255, 243);
-    text-align: left;
+    text-align: right;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     width: 60%;
@@ -50,10 +50,14 @@ header{
     left: 50px; 
    }
 
+  p{
+    color: white;
+  }
+
 .bottomscreen { 
     color: #ffa648;
-    position: absolute; 
-    bottom: 0px; 
+    position: fixed; 
+    bottom: 0;
     left: 0px; 
     font-size: 25px;
     z-index: 100;

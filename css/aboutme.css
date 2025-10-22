@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+header a:active,
+header a:link,
+header a:visited,
+header{
+    float: left;
+    color: rgb(233, 235, 213);
+    font-size: 45px;
+    text-align: right;
+    margin-top: 0px; 
+    margin-left: 0%; 
+    cursor: cell;
+   }
+   
+body{
+    background-color:rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    cursor: crosshair;
+    }
+
+li {
+  background-color: #00000088;
+  border: 0 solid #e2e8f0;
+  /* border-radius: 2rem; */
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: cell;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 200;
+  line-height: 0.5;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(142, 142, 142, 0.461);
+  touch-action: manipulation;
+}
+
+li:hover {
+  /* background-color: #3e3e3e; */
+  box-shadow: 0px 1px 2px rgba(205, 205, 205, 0.669);
+  color: #fff;
+}
+
+ h1{
+    color: rgb(180, 177, 165);
+    font-size: 60px;
+    margin-left: 15%; 
+   }
+
+ h2 :hover {
+    color: rgb(219, 0, 0)
+ }
+ h2{
+    color: rgb(254, 255, 243);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-top: 25px; 
+    margin-left: 15%; 
+   }
+h2:hover {
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 128, 0);
+}
+
+ h3{
+    color: rgb(83, 83, 83);
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    margin-left: 15%; 
+    
+   }
+
+  p{
+    color: white;
+    margin-left: 15%; 
+  }
+
+a:link,
+a:visited,
+a:active {
+   cursor: cell;
+   color: #fff;
+   text-decoration: none;
+}
+
+    /* .topnav :hover {
+    background-color:rgb(40, 40, 40);
+    } */
+
+.bottomscreen { 
+    color: #372d22;
+    position: fixed; 
+    bottom: 5%;
+    left: 0px; 
+    font-size: 100px;
+    z-index: -100;
+    }
