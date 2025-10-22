@@ -47,10 +47,26 @@ li:hover {
   color: #fff;
 }
 
+div.scroll-container {
+  background-color: #000000;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 5px;
+  margin-left: 15%;
+}
+
+div.scroll-container img {
+  padding: 5px;
+  width: 30%;
+  height: 15%;
+}
+
  h1{
     color: rgb(180, 177, 165);
     font-size: 60px;
     margin-left: 15%; 
+    white-space: nowrap;
+    overflow: hidden;
    }
 
  h2 :hover {
@@ -79,6 +95,7 @@ h2:hover {
   p{
     color: white;
     margin-left: 15%; 
+    font-size: 20px;
   }
 
 a:link,
@@ -100,4 +117,6 @@ a:active {
     left: 0px; 
     font-size: 100px;
     z-index: -100;
+    white-space: nowrap;
+    overflow: hidden;
     }
