@@ -1,21 +1,25 @@
-let headerContent =`<nav class="topnav">
+
+let headerContent =`
     <header>
-        <a href="index.html">junes dreyfus</a>
+        <a href="/index.html">junes dreyfus</a>
     </header>
       
-        <li id="button1">
-         <a href="works.html">works</a>
-        </li>
+        <a href="/works.html"><li id="button1">
+          works
+        </li></a>
 
-        <li id="button2">
-          <a href="dkhw.html">films</a>
-        </li>
+       <a href="#"><li id="button2" onclick="journal()">
+          journal
+       </li> </a>
 
-       <li id="button3">
-          <a href="#">portfolio</a>
-       </li> 
+       <a href="#"><li id="button3" onclick="portfolio()">
+          portfolio
+       </li> </a>
 
-       <li id="button4">
-         <a href="findme.html">find me!</a>
-       </li>`;
-document.querySelector('#buttoncontainer').insertAdjacentHTML('beforeend', headerContent);
+
+       <a href="/findme.html"><li id="button4">
+         find me!
+       </li></a>
+      
+  `
+document.querySelector('.topnav').insertAdjacentHTML('beforeend', headerContent);

@@ -1,0 +1,7 @@
+function portfolio() {
+    alert("No portfolio just yet\nplease be a little patient.:>");
+}
+
+function journal(){
+    alert("23/10/2025 15:28\n\nADDED NOTHING OF VALUE.\n\nAujourd'hui comme tous les jours depuis que je n'ai plus de studio je suis allée à la bibliothèque de l'Alcazar.\nJ'ai demandé à une fille de garder mon ordinateur pendant que je faisais pipi.\nElle avait l'air hyper contente que je lui parle\n\nd(- -)b listening to I LOVE YOU TRAVIS PT1 by Chuquimiamani-Condori d(- -)b\n\nTHIS WILL BE IN ITS OWN LITTLE SCROLLABLE DIALOG BOX\n\nI Might need to keep a 'FILM' button somewhere if i want it to remain in focus:7");
+}

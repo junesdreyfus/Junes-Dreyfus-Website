@@ -96,6 +96,10 @@ h2:hover {
     color: white;
     margin-left: 15%; 
     font-size: 20px;
+    width: 40%;
+    line-height: 1.5;
+    text-align: justify;
+
   }
 
 a:link,
