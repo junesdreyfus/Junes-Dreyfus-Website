@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding:0;
+    
 }
 
 header a:active,
@@ -14,13 +15,23 @@ header{
     margin-top: 0px; 
     margin-left: 0%; 
     cursor: cell;
+    
    }
+   
    
 body{
     background-color:rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
     cursor: crosshair;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     }
+
+.workspreview{
+    height: 100%;
+    width: 100%;
+}
 
 li {
   background-color: #00000088;
@@ -93,14 +104,30 @@ h2:hover {
    }
 
   p{
-    color: white;
+    color: rgb(234, 236, 209);
     margin-left: 15%; 
     font-size: 20px;
     width: 40%;
     line-height: 1.5;
     text-align: justify;
+    overflow: scroll
 
   }
+
+   #journal{
+  background-color: #3b3934;
+  width: 30%;
+  height: 93%;
+  display: block; 
+  position:fixed;
+  font-size: 15px;
+  text-align: justify;
+  overflow: scroll;
+ 
+  margin-left: 0%;
+  margin-top: 1%;
+  line-height: 1.5;
+}
 
 a:link,
 a:visited,

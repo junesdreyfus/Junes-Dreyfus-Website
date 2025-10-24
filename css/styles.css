@@ -6,6 +6,7 @@ body{
     background-color:rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
     cursor: crosshair;
+    
 }
 
 /* header{
@@ -29,6 +30,31 @@ header{
     cursor: cell;
    }
 
+   #journal{
+  background-color: #3b3934;
+  width: 30%;
+  height: 93%;
+  display: block; 
+  position:fixed;
+  font-size: 15px;
+  text-align: justify;
+  overflow: scroll;
+ 
+  margin-left: 0%;
+  margin-top: 1%;
+  line-height: 1.5;
+}
+
+  p{
+    color: white;
+    margin-left: 15%; 
+    font-size: 20px;
+    width: 40%;
+    line-height: 1.5;
+    text-align: justify;
+    overflow: scroll
+
+  }
  
  h1{
     float: left;
