@@ -141,6 +141,35 @@ a:active {
     background-color:rgb(40, 40, 40);
     } */
 
+
+#station_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('/assets/bgworks.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 40%;
+  width: 60%;
+  height: 100%;
+  z-index: -2;
+  background-image: url('/assets/bgworks.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
 .bottomscreen { 
     color: #372d22;
     position: fixed; 
