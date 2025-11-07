@@ -9,7 +9,7 @@ let headerContent =`
     
       
         <a href="works.html"><li id="button1">
-          ./works
+          works
         </li></a>
 
        <a href="#"><li id="button2" onclick="togglejournal()">
