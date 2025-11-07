@@ -88,11 +88,12 @@ div.scroll-container img {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     margin-top: 25px; 
-    margin-left: 15%; 
+    margin-left: 15px; 
+    opacity: 1;
    }
 h2:hover {
     background-color: rgb(30, 30, 30);
-    color: rgb(255, 128, 0);
+    color: rgb(255, 248, 220);
 }
 
  h3{
@@ -100,6 +101,7 @@ h2:hover {
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
     margin-left: 15%; 
+    opacity: 1;
     
    }
 
@@ -123,10 +125,10 @@ h2:hover {
   font-size: 15px;
   text-align: justify;
   overflow: scroll;
- 
   margin-left: 0%;
   margin-top: 1%;
   line-height: 1.5;
+  z-index: 100;
 }
 
 a:link,
@@ -163,11 +165,35 @@ a:active {
   width: 60%;
   height: 100%;
   z-index: -2;
-  background-image: url('/assets/bgworks.png');
+  background-image: url('/assets/black.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 1;
+}
+
+div.cartelworkcontainer{
+  
+  margin-left: 15%;
+  white-space: nowrap;
+  overflow: scroll;
+  height: 700px;
+}
+
+div.cartelworkcontainer :hover {
+  background-color: #1c1c1c;
+  opacity: 1;
+}
+
+div.cartelwork {
+  width: 400px;
+  background-color: #000000;
+  min-width: 400px;
+  margin-top: 10px;
+  white-space: normal;
+  overflow: auto;
+  opacity: 0.5;
+  
 }
 
 .bottomscreen { 

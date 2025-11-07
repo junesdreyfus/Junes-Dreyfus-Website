@@ -32,9 +32,9 @@ threedeeDiv.appendChild(renderer.domElement);
         }  ;
 
 //ambient light
-const ambientLight = new THREE.AmbientLight('rgba(255, 255, 255, 1)', station.light1); 
+const ambientLight = new THREE.AmbientLight('rgba(255, 255, 255, 1)', 0); 
 scene.add(ambientLight);
-scene.background = new THREE.Color('rgba(0, 0, 0, 1)'); // Replace with your desired hex color
+scene.background
 
 
 // boolean to control rotation
@@ -51,6 +51,8 @@ let model;
 loader.load('3Dmodel/skingrafting.glb', function (gltf) {
     model = gltf.scene;
     scene.add(model);
+
+
  
 
     //coordonates of model, its scale, and camera position/
@@ -73,7 +75,30 @@ loader.load('3Dmodel/skingrafting.glb', function (gltf) {
             }
         }
     });
+let targetIntensity = station.light1;
+let duration = 5000; // fade duration in ms
+let startTime = performance.now();
 
+function fadeLightIn(now) {
+    let elapsed = now - startTime;
+    let t = Math.min(elapsed / duration, 1);
+
+    // Ease-in-out cubic (smooth start & end)
+    let eased = t < 0.5
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    // Brighten the light
+    ambientLight.intensity = eased * targetIntensity;
+    //fade bg to black
+    let startColor = new THREE.Color("rgba(27, 19, 0, 1)");
+    let endColor   = new THREE.Color("black");
+    let currentColor = startColor.clone().lerp(endColor, eased);
+    scene.background = currentColor;
+
+    if (t < 1) requestAnimationFrame(fadeLightIn);
+}
+requestAnimationFrame(fadeLightIn);
 
      animate();
 }, undefined, function (error) {
@@ -174,7 +199,7 @@ resetmodel();
      
   //triggers rotation each time mouse hover in or out.
     document.getElementById("button1").addEventListener(event, () => {
-       scene.background = new THREE.Color('rgba(255, 0, 0, 1)'); ;
+       scene.background = new THREE.Color('rgba(0, 0, 0, 1)'); ;
     });
 });
 

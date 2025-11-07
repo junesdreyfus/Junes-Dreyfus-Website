@@ -30,7 +30,7 @@ let journalcontent =`
         section is there, it makes me think of giant bookmarks. <br><br>
         <i>d(- -)b listening to you got time and i got money by smerz d(- -)b\</i><br><br>
       </p>
-      <img src="/assets/image.gif" alt="image of me">
+      <img src="/assets/image.webp" alt="image of me">
 
       <p style="width:80%; margin-left: 10%">23/10/2025 15:28 <br><br>ADDED NOTHING OF VALUE.
         <br><br>Aujourd'hui comme tous les jours depuis que je n'ai plus de studio je suis allée à la bibliothèque de l'Alcazar.

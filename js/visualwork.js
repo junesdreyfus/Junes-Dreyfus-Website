@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     currentBg = newBg;
   }
 
-  document.querySelectorAll("a[data-bg]").forEach(link => {
+  document.querySelectorAll("div.cartelwork[data-bg]").forEach(link => {
     const img = link.getAttribute("data-bg");
 
     link.addEventListener("mouseenter", () => changeBackground(img));
