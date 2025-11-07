@@ -8,7 +8,7 @@ let headerContent =`
 
     
       
-        <a href="../works.html"><li id="button1">
+        <a href="works.html"><li id="button1">
           works
         </li></a>
 
@@ -21,7 +21,7 @@ let headerContent =`
        </li> </a>
 
 
-       <a href="../findme.html"><li id="button4">
+       <a href="findme.html"><li id="button4">
          find me!
        </li></a>
      <div class="journalcontainer">
