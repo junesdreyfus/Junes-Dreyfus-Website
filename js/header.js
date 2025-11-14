@@ -3,7 +3,7 @@ let headerContent =`
 
 
     <header>
-        <a href="index.html" style="z-index:5000;">junes dreyfus</a>
+        <a href="/Junes-Dreyfus-Website/" style="z-index:5000;">junes dreyfus</a>
     </header>
 
     

@@ -48,7 +48,7 @@ const loader = new THREE.GLTFLoader();
 let model;
 
 //loading the 3D model/
-loader.load('3Dmodel/skingrafting.glb', function (gltf) {
+loader.load('3Dmodel/skingrafting_compressed2.glb', function (gltf) {
     model = gltf.scene;
     scene.add(model);
 
