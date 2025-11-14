@@ -91,7 +91,7 @@ function fadeLightIn(now) {
     // Brighten the light
     ambientLight.intensity = eased * targetIntensity;
     //fade bg to black
-    let startColor = new THREE.Color("rgba(27, 19, 0, 1)");
+    let startColor = new THREE.Color("rgba(148, 132, 92, 1)");
     let endColor   = new THREE.Color("black");
     let currentColor = startColor.clone().lerp(endColor, eased);
     scene.background = currentColor;
