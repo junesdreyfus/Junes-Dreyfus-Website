@@ -8,6 +8,15 @@ let journalcontent =`
               onclick="togglejournal()";> X </button
               ">
       <p style="width:80%; margin-left: 10%">
+
+        <b>14/11/2025<br><br></b>
+        I've been avoiding this specific street for the past few days, as I deemed not to be dressed well enough to see them. I've been in job-hunting mode thus
+        my wardrobe has been restricting to a couple of ill-fitting work pants, androgynous as can be in the hope to counterbalance my face and hair and body which very much isn't. I felt today that I could however use 
+        a bit of that courage that seeing the women of that street, the working women, gives me. It's very hilly, almost in a looney-toon's kind of way, the road
+        unfurling with the faces of my sisters. I saw C. who told me that if I still couldn't find anything I could probably count on my "déesses", my goddesses.
+        I laughed and said that I was indeed considering it, unsure if she meant what I thought she was saying. She then humiliated some poor guy, and so I left and giggled
+        all the way to the Alcazar.<br><br>
+        <i>d(- -)b listening to Rosalia's Lux d(- -)b</i><br><br>
         <b>31/10/2025 16.11</b><br><br>
 
         <span style="color:orange">happy halloween</span>my neighbor is so loud.<br>
