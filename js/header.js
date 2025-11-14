@@ -7,7 +7,7 @@ let headerContent =`
     </header>
 
     
-      
+      <ul>
         <a href="/Junes-Dreyfus-Website/works.html"><li id="button1">
           works
         </li></a>
@@ -24,6 +24,7 @@ let headerContent =`
        <a href="/Junes-Dreyfus-Website/findme.html"><li id="button4">
          find me!
        </li></a>
+       </ul>
      <div class="journalcontainer">
     </div>
   `
