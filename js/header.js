@@ -7,7 +7,7 @@ let headerContent =`
     </header>
 
     
-      <ul>
+      <ul class="topnav">
         <a href="/Junes-Dreyfus-Website/works.html"><li id="button1">
           works
         </li></a>

@@ -31,9 +31,10 @@ body{
 .workspreview{
     height: 100%;
     width: 100%;
+    
 }
 
-ul {
+ul.topnav{
   width: 25%
 }
 
@@ -49,7 +50,6 @@ li {
   padding: 1rem 1.6rem;
   text-align: center;
   transition: all .1s cubic-bezier(.4, 0, .2, 1);
- 
   touch-action: manipulation;
 }
 
@@ -81,9 +81,6 @@ div.scroll-container img {
     overflow: hidden;
    }
 
- h2 :hover {
-    color: rgb(219, 0, 0)
- }
  h2{
     color: rgb(254, 255, 243);
     font-family: 'Roboto', sans-serif;
@@ -92,10 +89,7 @@ div.scroll-container img {
     margin-left: 15px; 
     opacity: 1;
    }
-h2:hover {
-    background-color: rgb(30, 30, 30);
-    color: rgb(255, 248, 220);
-}
+
 
  h3{
     color: rgb(83, 83, 83);
@@ -110,6 +104,7 @@ h2:hover {
     color: rgb(234, 236, 209);
     margin-left: 15%; 
     font-size: 20px;
+    font-family: 'freeMono', monospace;
     width: 40%;
     line-height: 1.5;
     text-align: justify;
@@ -179,11 +174,13 @@ div.cartelworkcontainer{
   white-space: nowrap;
   overflow: scroll;
   height: 700px;
+  
 }
 
 div.cartelworkcontainer :hover {
-  background-color: #1c1c1c;
+  background-color: #000000;
   opacity: 1;
+  width : 500px;
 }
 
 div.cartelwork {
@@ -191,9 +188,12 @@ div.cartelwork {
   background-color: #000000;
   min-width: 400px;
   margin-top: 10px;
-  white-space: normal;
-  overflow: auto;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  white-space: nowrap;
   opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+
   
 }
 
