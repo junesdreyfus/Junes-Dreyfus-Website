@@ -15,7 +15,7 @@ let journalcontent =`
         a bit of that courage that seeing the women of that street, the working women, gives me. It's very hilly, almost in a looney-toon's kind of way, the road
         unfurling with the faces of my sisters. I saw C. who told me that if I still couldn't find anything I could probably count on my "déesses", my goddesses.
         I laughed and said that I was indeed considering it, unsure if she meant what I thought she was saying. She then humiliated some poor guy, and so I left and giggled
-        all the way to the Alcazar.<br><br>
+        my way to the Alcazar.<br><br>
         <i>d(- -)b listening to Rosalia's Lux d(- -)b</i><br><br>
         <b>31/10/2025 16.11</b><br><br>
 

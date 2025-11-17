@@ -16,8 +16,8 @@ let headerContent =`
           journal
        </li> </a>
 
-       <a href="#"><li id="button3" onclick="portfolio()">
-          portfolio
+       <a href="/Junes-Dreyfus-Website/gestures.html"><li id="button3">
+          gestures
        </li> </a>
 
 

@@ -35,7 +35,8 @@ body{
 }
 
 ul.topnav{
-  width: 25%
+  width: 25%;
+  min-width: 400px;
 }
 
 li {
@@ -74,6 +75,56 @@ div.scroll-container img {
   height: 15%;
 }
 
+
+div.cartelworkcontainer{
+  
+  margin-left: 15%;
+  white-space: nowrap;
+  overflow: scroll;
+  height: 79vh;
+  
+}
+
+div.cartelworkcontainer :hover {
+  background-color: #000000;
+  opacity: 1;
+  width : 550px;
+}
+
+div.cartelwork {
+  width: 400px;
+  background-color: #000000;
+  min-width: 400px;
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+div.gesture-container {
+  margin-left: 15%;
+  height: 80vh;
+  /* white-space: nowrap;
+  overflow: scroll; */
+  width: 60vw;
+}
+
+div.gesture img {
+
+  max-width: 30vw;
+  max-height: 30vh;
+  overflow-wrap: break-word;
+}
+
+div.gesture :hover{
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+   
+}
+
  h1{
     color: rgb(180, 177, 165);
     font-size: 60px;
@@ -105,7 +156,7 @@ div.scroll-container img {
   p{
     color: rgb(234, 236, 209);
     margin-left: 15%; 
-    
+    margin-right: 15%;
     font-size: 20px;
     font-family: 'freeMono', monospace;
     width: 40%;
@@ -171,35 +222,6 @@ a:active {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 1;
-}
-
-div.cartelworkcontainer{
-  
-  margin-left: 15%;
-  white-space: nowrap;
-  overflow: scroll;
-  height: 79vh;
-  
-}
-
-div.cartelworkcontainer :hover {
-  background-color: #000000;
-  opacity: 1;
-  width : 550px;
-}
-
-div.cartelwork {
-  width: 400px;
-  background-color: #000000;
-  min-width: 400px;
-  margin-top: 10px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  opacity: 0.5;
-  transition: all 0.3s ease-in-out;
-
-  
 }
 
 .bottomscreen { 
