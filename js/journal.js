@@ -1,6 +1,7 @@
 let journaltoggled=false;
 let journalcontent =`
     <div id="journal">
+    
     <button style="color:black;
               margin-left:28%;
               font-size:20px;
@@ -8,6 +9,10 @@ let journalcontent =`
               onclick="togglejournal()";> X </button
               ">
       <p style="width:80%; margin-left: 10%">
+
+      Remembered about this today. Yet to find a home for it so it'll go here.
+
+      <iframe src="https://ckut.ca/archive-player/?id=23225" width="100%" height="190" frameborder="0" allowfullscreen></iframe>
 
         <b>14/11/2025<br><br></b>
         I've been avoiding this specific street for the past few days, as I deemed not to be dressed well enough to see them. I've been in job-hunting mode thus
@@ -49,6 +54,8 @@ let journalcontent =`
         THIS WILL BE IN ITS OWN LITTLE SCROLLABLE DIALOG BOX (that way I can better format/add images:>)<br><br>
         I Might need to keep a 'FILM' button somewhere if i want it to remain in focus:7
     </p>
+
+    
     </div>`
 
 function togglejournal() {

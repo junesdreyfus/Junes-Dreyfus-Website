@@ -118,9 +118,9 @@ div.gesture-container {
 
 .gesture img {
 
-  max-width: 30vw;
+  max-width: 20vw;
   max-height: 40vh;
-  min-width: 300px;
+  min-width: 12vw;
   justify-self: end;
   overflow-wrap: break-word;
   align-self: end;
