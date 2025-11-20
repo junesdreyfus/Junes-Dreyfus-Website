@@ -18,7 +18,11 @@ header{
     
    }
    
-   
+.mobilewarning{
+  display: none;
+  background-color: #000000;
+  opacity:70%;
+}
 body{
     background-color:rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
@@ -109,21 +113,35 @@ div.gesture-container {
   height: 80vh;
   /* white-space: nowrap;
   overflow: scroll; */
-  width: 60vw;
+  width: 80vw;
 }
 
-div.gesture img {
+.gesture img {
 
   max-width: 30vw;
-  max-height: 30vh;
+  max-height: 40vh;
+  min-width: 300px;
+  justify-self: end;
   overflow-wrap: break-word;
+  align-self: end;
 }
 
-div.gesture :hover{
+.gesture :hover {
   opacity: 0.5;
   transition: all 0.2s ease-in-out;
-   
 }
+
+.hover-text{
+  opacity: 0;
+  color: white
+}
+
+.gesture :hover .hover-text{
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+
 
  h1{
     color: rgb(180, 177, 165);
@@ -156,14 +174,13 @@ div.gesture :hover{
   p{
     color: rgb(234, 236, 209);
     margin-left: 15%; 
-    margin-right: 15%;
     font-size: 20px;
     font-family: 'freeMono', monospace;
     width: 40%;
-    min-width: 400px;
+    min-width: 350px;
     line-height: 1.5;
     text-align: justify;
-    overflow: scroll
+    overflow: hidden;
 
   }
 
@@ -182,6 +199,60 @@ div.gesture :hover{
   line-height: 1.5;
   z-index: 100;
 }
+
+@media (max-width: 480px) {
+  
+  p{
+    margin-left: 1%;
+    width: 99%;
+    font-size: 24px;
+    overflow: scroll;
+  }
+  .mobilewarning{
+    display:block;
+  }
+  div.scroll-container {
+    margin-left :1%;
+  }
+  h1{
+    margin-left: 0%;
+    overflow: scroll;
+  }
+  li{
+    margin-top: 1%;
+     padding: 0.3rem 0.8rem;
+  }
+  ul{
+    margin-left:1%;
+    padding-bottom:0.1rem;
+  }
+div.cartelworkcontainer{
+  
+  margin-left: 1%;
+  white-space: nowrap;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 75vh;
+}
+div.gesture-container {
+  margin-left: 1%;
+  height: 60vh;
+  overflow-x: scroll;
+  width: 95vw;
+}
+.gesture img {
+
+  max-width: 99vw;
+  max-height: 80vh;
+  width: 99vw;
+  justify-self: end;
+  overflow-wrap: break-word;
+  align-self: end;
+}
+
+  
+
+ }
 
 a:link,
 a:visited,

@@ -90,7 +90,15 @@ header{
    }
 
   p{
-    color: white;
+        color: rgb(234, 236, 209);
+    margin-left: 15%; 
+    font-size: 20px;
+    font-family: 'freeMono', monospace;
+    width: 40%;
+    min-width: 350px;
+    line-height: 1.5;
+    text-align: justify;
+    overflow: hidden;
   }
 
 .bottomscreen { 
@@ -161,3 +169,38 @@ a:active {
     /* .topnav :hover {
     background-color:rgb(40, 40, 40);
     } */
+.mobilewarning{
+  display: none;
+  background-color: #000000;
+  margin-top: 80%;
+  opacity:70%;
+}
+@media (max-width: 480px) {
+  
+  p{
+    margin-left: 1%;
+    width: 99%;
+    font-size: 24px;
+    overflow: scroll;
+  }
+  div.scroll-container {
+    margin-left :1%;
+  }
+  h1{
+    margin-left: 0%;
+    overflow: scroll;
+  }
+  li{
+    margin-top: 1%;
+     padding: 0.3rem 0.8rem;
+  }
+  ul{
+    margin-left:1%;
+    padding-bottom:0.1rem;
+  }
+
+    .mobilewarning{
+    display:block;
+  }
+  
+}
