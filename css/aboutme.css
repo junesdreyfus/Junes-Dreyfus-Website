@@ -124,6 +124,7 @@ div.gesture-container {
   justify-self: end;
   overflow-wrap: break-word;
   align-self: end;
+  margin:1%;
 }
 
 .gesture :hover {
@@ -280,6 +281,21 @@ a:active {
   background-repeat: no-repeat;
   opacity: 1;
 }
+
+#gesture_bg {
+  position: fixed;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('../assets/gestures-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
 
 #bg {
   position: fixed;
