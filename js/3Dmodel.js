@@ -1,5 +1,5 @@
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(50, 750 / 500, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 1000);
 
 const threedeeDiv = document.getElementById('threedee');
 
@@ -7,24 +7,37 @@ const renderer = new THREE.WebGLRenderer({antialias : true});
 
 //3D window size (scales the model!!!)
 
-//3D window size (scales the model!!!)
-
-renderer.setSize(1920, 1920);
+renderer.setSize(window.innerWidth, window.innerHeight);
 threedeeDiv.appendChild(renderer.domElement);
+
+function onWindowResize() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    camera.aspect = width / height;   
+    camera.updateProjectionMatrix();  
+
+    renderer.setSize(width, height);
+}
+
+window.addEventListener('resize', onWindowResize);
+
+// Run it once at start
+onWindowResize();
 
 //initial angle of station
         let station={
-        posx : 2,
-        posy : -2,
-        posz : -12.2,
+        posx : 2.9,
+        posy : -6,
+        posz : -8,
 
-        angx : 0.2,
-        angy : 0,
+        angx : -0.1,
+        angy : -0.1,
         angz : 0,
 
         scax : 0.1,
-        scay : 0.1,
-        scaz : 0.1,
+        scay : 0.15,
+        scaz : 0.08,
 
         light1 : 1.3,
 
@@ -144,9 +157,9 @@ function resetmodel(){
  if (rotation1) {
     //model.rotation.axis += (goalangle - model.rotation.axis) * speed
      model.rotation.y += (5 - model.rotation.y) * animationspeed;
-     model.position.x += (-7 - model.position.x) * animationspeed
-     model.position.y += (-5.5 - model.position.y) * animationspeed
-     model.position.z += (10 - model.position.z) * animationspeed
+     model.position.x += (-7.5 - model.position.x) * animationspeed
+     model.position.y += (-2.8 - model.position.y) * animationspeed
+     model.position.z += (7 - model.position.z) * animationspeed
 
     // // ambientLight.intensity -= 0.005; // Dim the light
     // ambientLight.intensity -= (1 - ambientLight.intensity) * 0.009; // Dim the light
@@ -154,21 +167,22 @@ function resetmodel(){
  }
  if (rotation2) {
     //model.rotation.axis += (goalangle - model.rotation.axis) * speed
-     model.rotation.x += (2.9 - model.rotation.x) * animationspeed;
-     model.position.x += (-15 - model.position.x)* animationspeed;
-     model.position.y += (9 - model.position.y)* animationspeed;
-     model.position.z += (-30 - model.position.z)*animationspeed;
+     model.rotation.x += (3.3 - model.rotation.x) * animationspeed;
+     model.rotation.y += (0.1 - model.rotation.y) * animationspeed;
+     model.position.x += (-1 - model.position.x)* animationspeed;
+     model.position.y += (2 - model.position.y)* animationspeed;
+     model.position.z += (-25 - model.position.z)*animationspeed;
  }
    if (rotation3) {
-    model.rotation.y += (-5 -  model.rotation.y) * animationspeed;
-    model.position.z += (7.5 - model.position.z) * animationspeed
-     model.position.y += (-5 - model.position.y) * animationspeed
+    model.rotation.y += (-5.3 -  model.rotation.y) * animationspeed;
+    model.position.z += (5 - model.position.z) * animationspeed
+     model.position.y += (-3 - model.position.y) * animationspeed
  }
    if (rotation4) {
      model.rotation.y += (1.5 - model.rotation.y) * animationspeed;
      model.position.x += (1 - model.position.x) * animationspeed
-     model.position.y += (-3.2 - model.position.y) * animationspeed
-     model.position.z += (-4.8 - model.position.z) * animationspeed
+     model.position.y += (-5.2 - model.position.y) * animationspeed
+     model.position.z += (-6 - model.position.z) * animationspeed
 
  } else {
 resetmodel();
