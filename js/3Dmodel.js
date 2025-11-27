@@ -36,7 +36,7 @@ onWindowResize();
         angz : 0,
 
         scax : 0.1,
-        scay : 0.15,
+        scay : 0.1,
         scaz : 0.08,
 
         light1 : 1.3,
