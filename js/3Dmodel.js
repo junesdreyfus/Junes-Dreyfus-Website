@@ -87,8 +87,16 @@ loader.load('3Dmodel/skingrafting_compressed2.glb', function (gltf) {
     camera.position.set(1, -4, 1);
 
     model.traverse((child) => {
+        child.castShadow = false;
+child.receiveShadow = false;
         if (child.isMesh) {
-            if (child.material && child.material.map) {
+            if (window.innerWidth <= 700) {
+                 child.material = new THREE.MeshLambertMaterial({
+                map: child.material.map ?? null,
+                color: 0xffffff
+                 }
+    )}
+            else if (child.material && child.material.map) {
                 child.material = child.material;  // Use the original material (with texture)
             } else {
                 child.material = new THREE.MeshStandardMaterial({
