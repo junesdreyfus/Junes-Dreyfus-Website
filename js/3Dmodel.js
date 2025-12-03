@@ -3,7 +3,7 @@ const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 1000);
 
 const threedeeDiv = document.getElementById('threedee');
 
-const renderer = new THREE.WebGLRenderer({ antialias: false }); // disable AA on mobile
+const renderer = new THREE.WebGLRenderer();
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 renderer.setSize(window.innerWidth, window.innerHeight);
 threedeeDiv.appendChild(renderer.domElement);
@@ -16,6 +16,22 @@ function onWindowResize() {
     camera.updateProjectionMatrix();  
 
     renderer.setSize(width, height);
+}
+
+function isLowEndDevice(renderer) {
+    const caps = renderer.capabilities;
+
+    // Reliable GPU checks
+    const lowUniforms = caps.maxFragmentUniforms < 1024;
+    const lowTextureSize = caps.maxTextureSize <= 2048;
+
+    // WebGL 1-only → older/weak GPU
+    const isWebGL1 = caps.isWebGL2 === false;
+
+    // If user manually uses low-power mode
+    const lowPowerMode = renderer.getContext().getContextAttributes().powerPreference === "low-power";
+
+    return lowUniforms || lowTextureSize || isWebGL1 || lowPowerMode;
 }
 
 
@@ -71,68 +87,73 @@ const loader = new THREE.GLTFLoader();
 
 let model;
 
-//loading the 3D model/
 loader.load('3Dmodel/skingrafting_compressed2.glb', function (gltf) {
     model = gltf.scene;
     scene.add(model);
 
-
- 
-
-    //coordonates of model, its scale, and camera position/
     model.position.set(station.posx, station.posy, station.posz);
     model.rotation.set(station.angx, station.angy, station.angz);
     model.scale.set(station.scax, station.scay, station.scaz);
-    
+
     camera.position.set(1, -4, 1);
 
+    // 🔥 Determine if we should downgrade to Lambert based on actual GPU capability
+    const useLambert = isLowEndDevice(renderer);
+
     model.traverse((child) => {
-        child.castShadow = false;
-child.receiveShadow = false;
         if (child.isMesh) {
-            if (window.innerWidth <= 700) {
-                 child.material = new THREE.MeshLambertMaterial({
-                map: child.material.map ?? null,
-                color: 0xffffff
-                 }
-    )}
-            else if (child.material && child.material.map) {
-                child.material = child.material;  // Use the original material (with texture)
-            } else {
-                child.material = new THREE.MeshStandardMaterial({
-                    color: '0xffffff',
-                    metalness: 0.0,
-                    roughness: 1.0
+
+            // ✔ Suggestion 5: Remove pointless material reassignment
+            // (your old code had child.material = child.material)
+
+            // ✔ Suggestion 6: Apply MeshLambertMaterial only if the GPU is weak
+            if (useLambert) {
+                child.material = new THREE.MeshLambertMaterial({
+                    map: child.material?.map || null,
+                    color: 0xffffff
                 });
+            } else {
+                // Leave original material intact for good GPUs
+                if (!child.material) {
+                    child.material = new THREE.MeshStandardMaterial({
+                        color: 0xffffff,
+                        metalness: 0,
+                        roughness: 1
+                    });
+                }
             }
+
+            // Disable shadows for weak GPUs
+            child.castShadow = false;
+            child.receiveShadow = false;
         }
     });
-let targetIntensity = station.light1;
-let duration = 5000; // fade duration in ms
-let startTime = performance.now();
 
-function fadeLightIn(now) {
-    let elapsed = now - startTime;
-    let t = Math.min(elapsed / duration, 1);
+    // Fade-in logic unchanged...
+    let targetIntensity = station.light1;
+    let duration = 5000;
+    let startTime = performance.now();
 
-    // Ease-in-out cubic (smooth start & end)
-    let eased = t < 0.5
-        ? 4 * t * t * t
-        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    function fadeLightIn(now) {
+        let elapsed = now - startTime;
+        let t = Math.min(elapsed / duration, 1);
 
-    // Brighten the light
-    ambientLight.intensity = eased * targetIntensity;
-    //fade bg to black
-    let startColor = new THREE.Color("rgba(148, 132, 92, 1)");
-    let endColor   = new THREE.Color("black");
-    let currentColor = startColor.clone().lerp(endColor, eased);
-    scene.background = currentColor;
+        let eased = t < 0.5
+            ? 4 * t * t * t
+            : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
-    if (t < 1) requestAnimationFrame(fadeLightIn);
-}
-requestAnimationFrame(fadeLightIn);
+        ambientLight.intensity = eased * targetIntensity;
 
-     animate();
+        let startColor = new THREE.Color("rgba(148, 132, 92, 1)");
+        let endColor   = new THREE.Color("black");
+        let currentColor = startColor.clone().lerp(endColor, eased);
+        scene.background = currentColor;
+
+        if (t < 1) requestAnimationFrame(fadeLightIn);
+    }
+    requestAnimationFrame(fadeLightIn);
+
+    animate();
 }, undefined, function (error) {
     console.error(error);
 });
