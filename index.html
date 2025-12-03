@@ -16,7 +16,8 @@
 <!-- <script src = "3Dmodel/3dmodel.js"></script> -->
 <script src="js/3Dmodel.js" type="module"></script>
 <script src="js/journal.js"></script>
-<!-- Make the link redirect after the model animation. -->
+
+<!-- Make the link redirect after the model animation on mobile. -->
 <script>
 window.addEventListener("DOMContentLoaded", () => {
 
@@ -40,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
             setTimeout(() => {
                 window.location.href = url;
-            }, 5000);
+            }, 1000);
         });
     });
 
