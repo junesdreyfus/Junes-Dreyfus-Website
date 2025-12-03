@@ -46,10 +46,10 @@ onWindowResize();
         bgred : 0,
         }  ;
 function responsiveScript() {
-  if (window.innerWidth <= 500) {
+  if (window.innerWidth <= 700) {
     station.posx = 2.8;
     station.posz = -11;
-    station.posy = -7.5;  // Adjust posz for mobile devices
+    station.posy = -7;  // Adjust posz for mobile devices
   } else {
     station.posz = -8;   // Default posz for larger screens
     station.posy = -6;
@@ -152,7 +152,7 @@ function getForwardVector() {
 function animate() {
     	  requestAnimationFrame( animate );
 
-let animationspeed = 0.025;
+let animationspeed = 0.02;
 
 function resetmodel(){
         //should make a function for this. this resets the changes into the original value.

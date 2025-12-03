@@ -202,7 +202,7 @@ div.gesture-container {
   z-index: 100;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   
   p{
     margin-left: 1%;
@@ -240,10 +240,10 @@ div.cartelworkcontainer{
   height: 75vh;
 }
 div.gesture-container {
-  margin-left: 1%;
+  margin-left: 2%;
   height: 60vh;
   overflow-x: scroll;
-  width: 95vw;
+  width: 98vw;
 }
 .gesture img {
 
@@ -268,7 +268,6 @@ div.gesture-container {
   z-index: 100;
 }
 
-  
 
  }
 

@@ -15,6 +15,35 @@
 <script src="js/journal.js"></script>
 <script src="js/3Dmodel.js" type="module"></script>
 <script src="js/messages.js"></script>
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+
+    // detect touch devices
+    const isTouch = (
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0 ||
+      window.matchMedia("(pointer: coarse)").matches
+    );
+
+    if (!isTouch) return; // only run on touch screens
+
+    const links = document.querySelectorAll('.cartelworkcontainer a');
+
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const url = this.href;
+            console.log("Touch detected — redirecting in 5 seconds.");
+
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500);
+        });
+    });
+
+});
+</script>
 
 <!-- <script src ="3Dmodel.js"></script> -->
 
@@ -32,9 +61,7 @@
     
     <div class="journalcontainer">
     </div>
-        <p class="mobilewarning">
-    This part of the website isn't optimized for mobile use yet i fear...don't let me stop you though.☆☆☆☆☆☆☆☆☆Junes
-    </p>
+
     <h1><a href="./works.html">/works/</a></h1>
          
     <div class="cartelworkcontainer">
