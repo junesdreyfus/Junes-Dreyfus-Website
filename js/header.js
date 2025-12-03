@@ -10,6 +10,8 @@ let headerContent =`
       <ul class="topnav">
         <a href="/Junes-Dreyfus-Website/works.html"><li id="button1">
           works
+          <div class="workmenu">
+          </div>
         </li></a>
 
        <a href="#"><li id="button2" onclick="togglejournal()">

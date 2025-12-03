@@ -21,7 +21,8 @@ header{
 .mobilewarning{
   display: none;
   background-color: #000000;
-  opacity:70%;
+  opacity:100%;
+  border: #ffffff;
 }
 body{
     background-color:rgb(0, 0, 0);
@@ -211,6 +212,9 @@ div.gesture-container {
   }
   .mobilewarning{
     display:block;
+    font-family:'Courier New', Courier, monospace;
+    font-size:18px;
+    line-height: 1;
   }
   div.scroll-container {
     margin-left :1%;
@@ -243,12 +247,25 @@ div.gesture-container {
 }
 .gesture img {
 
-  max-width: 46vw;
+  max-width: 45vw;
   max-height: 80vh;
-  
   justify-self: end;
   overflow-wrap: break-word;
   align-self: end;
+}
+
+   #journal{
+  background-color: #3b3934;
+  height: 93%;
+  display: block; 
+  position:fixed;
+  font-size: 15px;
+  text-align: justify;
+  overflow-y: scroll;
+  margin-left: 0%;
+  margin-top: 1%;
+  line-height: 1.5;
+  z-index: 100;
 }
 
   

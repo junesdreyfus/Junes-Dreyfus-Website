@@ -3,7 +3,7 @@ let journalcontent =`
     <div id="journal">
     
     <button style="color:black;
-              margin-left:28%;
+              left:0%;
               font-size:20px;
               position: fixed;"
               onclick="togglejournal()";> X </button

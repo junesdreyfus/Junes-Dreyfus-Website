@@ -20,6 +20,8 @@ function onWindowResize() {
     renderer.setSize(width, height);
 }
 
+
+
 window.addEventListener('resize', onWindowResize);
 
 // Run it once at start
@@ -43,7 +45,18 @@ onWindowResize();
 
         bgred : 0,
         }  ;
-
+function responsiveScript() {
+  if (window.innerWidth <= 500) {
+    station.posx = 2.8;
+    station.posz = -11;
+    station.posy = -7.5;  // Adjust posz for mobile devices
+  } else {
+    station.posz = -8;   // Default posz for larger screens
+    station.posy = -6;
+    station.posx = 2.9;
+  }
+}
+responsiveScript();
 //ambient light
 const ambientLight = new THREE.AmbientLight('rgba(255, 255, 255, 1)', 0); 
 scene.add(ambientLight);
