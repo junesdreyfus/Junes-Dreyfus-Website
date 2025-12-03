@@ -3,10 +3,8 @@ const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 1000);
 
 const threedeeDiv = document.getElementById('threedee');
 
-const renderer = new THREE.WebGLRenderer({antialias : true});
-
-//3D window size (scales the model!!!)
-
+const renderer = new THREE.WebGLRenderer({ antialias: false }); // disable AA on mobile
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 renderer.setSize(window.innerWidth, window.innerHeight);
 threedeeDiv.appendChild(renderer.domElement);
 
