@@ -257,15 +257,14 @@ div.gesture-container {
    #journal{
   background-color: #3b3934;
   height: 93%;
-  display: block; 
-  position:fixed;
-  font-size: 15px;
-  text-align: justify;
+  width: 20vw;
+  overflow-x: hidden;
   overflow-y: scroll;
   margin-left: 0%;
   margin-top: 1%;
   line-height: 1.5;
   z-index: 100;
+  min-width: 70%;
 }
 
 
@@ -279,9 +278,10 @@ a:active {
    text-decoration: none;
 }
 
-    /* .topnav :hover {
-    background-color:rgb(40, 40, 40);
-    } */
+a:hover {
+   color: rgb(232, 198, 130);
+     transition: color 0.5s ease-in-out;
+}
 
 
 #station_bg {
@@ -337,3 +337,4 @@ a:active {
     white-space: nowrap;
     overflow: hidden;
     }
+

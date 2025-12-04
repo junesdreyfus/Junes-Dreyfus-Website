@@ -129,7 +129,6 @@ loader.load('3Dmodel/skingrafting_compressed2.glb', function (gltf) {
         }
     });
 
-    // Fade-in logic unchanged...
     let targetIntensity = station.light1;
     let duration = 5000;
     let startTime = performance.now();
