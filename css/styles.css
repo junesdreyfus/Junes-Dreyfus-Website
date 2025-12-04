@@ -198,12 +198,23 @@ a:active {
     padding-bottom:0.1rem;
   }
 
+
   .mobilewarning{
     display:block;
     font-family:'Courier New', Courier, monospace;
-    font-size:18px;
+    font-size:15px;
     line-height: 1;
+    color:white;
+    z-index: -1;
+    position: fixed;
+    top: 20%;
+    right: 1%;
+    width: 40%;
+    text-align: right;
+
   }
+
+
 
    #journal{
   background-color: #3b3934;

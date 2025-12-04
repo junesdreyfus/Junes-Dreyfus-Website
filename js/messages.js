@@ -10,3 +10,7 @@ function journal(){
 function rentrerchezsoi() {
     alert("Hey I hate this project, OK? \n\nSorry it will never ever see the light of day again:<");
 }
+
+function flipyourphone() {
+    alert("Hello, this website is better if your phone is flipped horizontally \nbut don't let me stop you");
+}
