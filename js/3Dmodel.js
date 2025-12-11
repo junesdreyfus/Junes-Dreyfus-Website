@@ -16,6 +16,8 @@ function onWindowResize() {
     camera.updateProjectionMatrix();  
 
     renderer.setSize(width, height);
+    //    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 0.5))
+ ;
 }
 
 function isLowEndDevice(renderer) {
