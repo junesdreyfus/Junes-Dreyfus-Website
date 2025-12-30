@@ -181,7 +181,7 @@ div.gesture-container {
     width: 40%;
     min-width: 350px;
     line-height: 1.5;
-    text-align: justify;
+    text-align: left;
     overflow: hidden;
 
   }
