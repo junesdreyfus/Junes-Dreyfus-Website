@@ -8,7 +8,8 @@ let journalcontent =`
               position: fixed;"
               onclick="togglejournal()";> X </button
               ">
-      <p style="width:80%; margin-left: 10%">4th of december 2025 : I feel chilly.<br>
+      <p style="width:80%; margin-left: 10%">New! <a href="/gestures/most-loved-of2025.html"><b><i>Most Loved Of 2025</b></i></a><br>
+      02/12/2025 : I feel chilly.
       <video controls width="90%"><source src="https://junesdreyfus.github.io/Junes-Dreyfus-Website/assets/journal/4.mp4" type="video/mp4"></video>
       <img src="https://junesdreyfus.github.io/Junes-Dreyfus-Website/assets/journal/1.webp" style="width:90%";>
       <img src="https://junesdreyfus.github.io/Junes-Dreyfus-Website/assets/journal/2.webp" style="width:90%";>
