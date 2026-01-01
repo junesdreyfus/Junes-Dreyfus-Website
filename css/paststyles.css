@@ -1,0 +1,289 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+body{
+    background-color:rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    cursor: crosshair;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+#loading-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+  font-size: 1.5em;
+  color: white;
+  z-index: -101;
+}
+
+/* header{
+    height:80px;
+    width: 100%;
+    background-color:rgb(39, 38, 46);
+    position: static;
+    cursor: crosshair;
+} */
+
+header a:active,
+header a:link,
+header a:visited,
+header{
+    float: left;
+    color: rgb(233, 235, 213);
+    font-size: 45px;
+    text-align: right;
+    margin-top: 0px; 
+    margin-left: 0%; 
+    cursor: cell;
+   }
+
+  .notegasstation img{
+  width:10%;
+  min-width: 75px;
+  z-index: 60;
+  position:absolute;
+  bottom: 10px;
+  right: 3%;
+  transition: all 0.3s ease-in-out;
+}
+  .notegasstation img:hover {
+    width:10.3%;
+    rotate: 30deg;
+    transition: all 0.3s ease-in-out;
+  }
+  .notegasstation p{
+  bottom: 50px;
+  width: 50px;
+  right: 0px;
+  position: absolute;
+  opacity: 0;
+  background-color: #cacbc1;
+  color: rgb(0, 0, 0);
+  z-index: 50;
+  transition: all 0.3s ease-in-out;
+  }
+  .notegasstation img:hover + p{
+  right: 300px;
+  opacity:1;
+  transition: all 0.3s ease-in-out;
+  
+
+  }
+
+
+   #journal{
+  background-color: #3b3934;
+  width: 30%;
+  min-width: 400px;
+  height: 93%;
+  display: block; 
+  position:fixed;
+  font-size: 15px;
+  text-align: justify;
+  overflow: scroll;
+  margin-left: 0%;
+  margin-top: 1%;
+  line-height: 1.5;
+  z-index: 100;
+}
+
+ #journal img{
+  width: 90%
+ }
+
+  p{
+    color: white;
+    margin-left: 15%; 
+    font-size: 20px;
+    width: 40%;
+    line-height: 1.5;
+    text-align: justify;
+    overflow: scroll
+
+  }
+ 
+ h1{
+    float: left;
+    color: rgb(180, 177, 165);
+    font-size: 60px;
+    text-align: left;
+   }
+
+ h2{
+    float: left;
+    color: rgb(254, 255, 243);
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    width: 60%;
+    height: 720px;
+    margin-top: 60px; 
+    margin-left: 0px; 
+    left: 50px; 
+   }
+
+  p{
+        color: rgb(234, 236, 209);
+    margin-left: 15%; 
+    font-size: 20px;
+    font-family: 'freeMono', monospace;
+    width: 40%;
+    min-width: 350px;
+    line-height: 1.5;
+    text-align: justify;
+    overflow: hidden;
+  }
+
+
+
+    #threedee {
+        color: #FFFFFF;
+        margin-top: 0%;
+        width: 100%;
+        box-sizing: border-box;
+        position: fixed;
+        z-index: -100;
+    }
+
+    /* li {
+    outline: 0.1rem solid #FFFFFF ;
+    background-color:rgb(0, 0, 0);
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    width: 10%;
+    cursor: cell;
+    float: inline-start;
+     z-index: 100;
+    } */
+
+ul.topnav{
+  width: 25%;
+  min-width: 400px;
+}
+
+li {
+
+  color: #ffffff;
+  cursor: cell;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 200;
+
+  padding: 1rem 1.6rem;
+  text-align: center;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+ 
+  touch-action: manipulation;
+}
+
+li:hover {
+  /* background-color: #3e3e3e; */
+  box-shadow: 0px 1px 2px rgba(205, 205, 205, 0.669);
+  color: #fff;
+}
+
+a:link,
+a:visited,
+a:active {
+   cursor: cell;
+   color: #fff;
+   text-decoration: none;
+}
+
+    /* .topnav :hover {
+    background-color:rgb(40, 40, 40);
+    } */
+.mobilewarning{
+  display: none;
+  background-color: #000000;
+  opacity:100%;
+}
+@media (max-width: 480px) {
+  
+  p{
+    margin-left: 1%;
+    width: 93%;
+    font-size: 22px;
+    overflow: scroll;
+  }
+  div.scroll-container {
+    margin-left :1%;
+  }
+  h1{
+    margin-left: 0%;
+    overflow: scroll;
+  }
+  li{
+    margin-top: 1%;
+     padding: 0.3rem 0.8rem;
+  }
+  ul{
+    margin-left:1%;
+    padding-bottom:0.1rem;
+  }
+
+
+  .mobilewarning{
+    display:block;
+    font-family:'Courier New', Courier, monospace;
+    font-size:15px;
+    line-height: 1;
+    color:white;
+    z-index: -1;
+    position: fixed;
+    top: 20%;
+    right: 5%;
+    width: 40%;
+    text-align: right;
+
+  }
+
+
+
+   #journal{
+  background-color: #3b3934;
+  height: 93%;
+  width: 20vw;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  margin-left: 0%;
+  margin-top: 1%;
+  line-height: 1.5;
+  z-index: 100;
+  min-width: 70%;
+}
+
+ #journal img{
+  width: 70%
+ }
+
+
+  .notegasstation p{
+  font-size: 14px;
+  left: 0px;
+  width: 60%;
+
+  }
+  .notegasstation img:hover + p{
+  left: 12%;
+  opacity:0.75;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+  
+}
+
+  .notegasstation img{
+
+  left: 15px;
+  bottom: 15px;
+  }
+}
