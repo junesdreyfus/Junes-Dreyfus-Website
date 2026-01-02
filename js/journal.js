@@ -2,13 +2,9 @@ let journaltoggled=false;
 let journalcontent =`
     <div id="journal">
     
-    <button style="color:black;
-              left:0%;
-              font-size:20px;
-              position: fixed;"
-              onclick="togglejournal()";> X </button
+    <button onclick="togglejournal()";> X </button
               ">
-      <p style="width:80%; margin-left: 10%"><a href="/gestures/most-loved-of2025.html"><b><i><u>New Page! Most Loved Of 2025</u></b></i></a><br>
+      <p style="width:80%; margin-left: 10%"><a href="https://junesdreyfus.github.io/Junes-Dreyfus-Website/gestures/most-loved-of2025.html"><b><i><u>New Page! Most Loved Of 2025</u></b></i></a><br>
       02/12/2025 : I feel chilly.
       <video controls width="90%"><source src="https://junesdreyfus.github.io/Junes-Dreyfus-Website/assets/journal/4.mp4" type="video/mp4"></video>
       <img src="https://junesdreyfus.github.io/Junes-Dreyfus-Website/assets/journal/1.webp" ;>
