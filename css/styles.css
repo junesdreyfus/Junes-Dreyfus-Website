@@ -15,8 +15,10 @@ header{
     margin-top: 0px; 
     margin-left: 0%; 
     cursor: cell;
+  
     
    }
+
 
    #threedee {
         color: #FFFFFF;
@@ -60,8 +62,7 @@ body{
 }
 
 ul.topnav{
-  width: 25%;
-  min-width: 400px;
+width: 400px;
 }
 
 li {

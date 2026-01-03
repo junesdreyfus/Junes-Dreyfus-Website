@@ -216,14 +216,14 @@ function resetmodel(){
  }
    if (rotation3) {
     model.rotation.y += (-5.3 -  model.rotation.y) * animationspeed;
-    model.position.z += (5 - model.position.z) * animationspeed
-     model.position.y += (-3 - model.position.y) * animationspeed
+    model.position.z += (5 - model.position.z) * animationspeed;
+     model.position.y += (-3 - model.position.y) * animationspeed;
  }
    if (rotation4) {
      model.rotation.y += (1.5 - model.rotation.y) * animationspeed;
-     model.position.x += (1 - model.position.x) * animationspeed
-     model.position.y += (-5.2 - model.position.y) * animationspeed
-     model.position.z += (-6 - model.position.z) * animationspeed
+     model.position.x += (-0.5 - model.position.x) * animationspeed;
+     model.position.y += (-5.2 - model.position.y) * animationspeed;
+     model.position.z += (-6 - model.position.z) * animationspeed;
 
  } else {
 resetmodel();
