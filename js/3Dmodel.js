@@ -99,33 +99,17 @@ loader.load('3Dmodel/skingrafting_compressed2.glb', function (gltf) {
 
     camera.position.set(1, -4, 1);
 
-    // 🔥 Determine if we should downgrade to Lambert based on actual GPU capability
     const useLambert = isLowEndDevice(renderer);
 
     model.traverse((child) => {
         if (child.isMesh) {
 
-            // ✔ Suggestion 5: Remove pointless material reassignment
-            // (your old code had child.material = child.material)
-
-            // ✔ Suggestion 6: Apply MeshLambertMaterial only if the GPU is weak
-            if (useLambert) {
+   
                 child.material = new THREE.MeshLambertMaterial({
                     map: child.material?.map || null,
                     color: 0xffffff
                 });
-            } else {
-                // Leave original material intact for good GPUs
-                if (!child.material) {
-                    child.material = new THREE.MeshStandardMaterial({
-                        color: 0xffffff,
-                        metalness: 0,
-                        roughness: 1
-                    });
-                }
-            }
 
-            // Disable shadows for weak GPUs
             child.castShadow = false;
             child.receiveShadow = false;
         }
