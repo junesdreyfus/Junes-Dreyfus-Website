@@ -15,6 +15,7 @@ header{
     margin-top: 0px; 
     margin-left: 0%; 
     cursor: cell;
+    
   
     
    }
@@ -374,7 +375,7 @@ div.cartelworkcontainer{
   white-space: nowrap;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 75vh;
+  height: 65vh;
 }
 div.gesture-container {
   margin-left: 2%;
