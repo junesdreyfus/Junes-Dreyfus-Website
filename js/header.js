@@ -3,12 +3,12 @@ let headerContent =`
 
 
     <header>
-        <a href="/Junes-Dreyfus-Website/" style="z-index:5000;">junes dreyfus</a>
+        <a href="/" style="z-index:5000;">junes dreyfus</a>
     </header>
 
     
       <ul class="topnav">
-        <a href="/Junes-Dreyfus-Website/works.html"><li id="button1">
+        <a href="/works.html"><li id="button1">
           works
           <div class="workmenu">
           </div>
@@ -18,12 +18,12 @@ let headerContent =`
           journal
        </li> </a>
 
-       <a href="/Junes-Dreyfus-Website/gestures.html"><li id="button3">
+       <a href="/gestures.html"><li id="button3">
           gestures
        </li> </a>
 
 
-       <a href="/Junes-Dreyfus-Website/findme.html"><li id="button4">
+       <a href="/findme.html"><li id="button4">
          find me!
        </li></a>
        </ul>
