@@ -338,7 +338,14 @@ a:hover {
     }
 
 
-
+.doodle img{
+    width:30%;
+    min-width:300px;
+     z-index:50;
+      position:absolute;
+      right:15%;
+       top:50%
+  }
 
 @media (max-width: 600px) {
   
@@ -443,5 +450,9 @@ div.gesture-container {
   bottom: 15px;
   }
 
+  .doodle img{
+       position:relative;
+       right:0%
+  }
 
  }
