@@ -148,12 +148,13 @@ div.gesture-container {
   overflow-wrap: break-word;
   align-self: end;
   margin:1%;
-  transition: all 0.2s ease-in-out;
+  opacity:1;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .gesture img:hover {
-  rotate: 5deg;
-  transition: all 0.2s ease-in-out;
+  opacity:0.3;
+  transition: opacity 0.1s ease-in-out;
 }
 
 .hover-text{
@@ -229,6 +230,10 @@ div.gesture-container {
   width: 90%
  }
 
+  #journal img{
+  width: 70%
+ }
+
  #journal button{
   color:black;
   left:28%;
@@ -253,7 +258,7 @@ div.gesture-container {
   .notegasstation p{
   bottom: 50px;
   width: 50px;
-  right: 0px;
+  right: -200px;
   position: absolute;
   opacity: 0;
   background-color: #cacbc1;
@@ -264,6 +269,7 @@ div.gesture-container {
   .notegasstation img:hover + p{
   right: 15%;
   opacity:1;
+  
   transition: all 0.3s ease-in-out;
 
   }
@@ -403,22 +409,22 @@ div.gesture-container {
   background-color: #3b3934;
   height: 93%;
   width: 20vw;
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: scroll;
   margin-left: 0%;
   margin-top: 1%;
   line-height: 1.5;
   z-index: 100;
-  min-width: 70%;
+  min-width: 60%;
 }
 
  #journal img{
-  width: 70%
+  width: 99%
  }
 
  #journal p{
   font-size: 16px;
-  width: 70%
+   min-width: 60%;
  }
 
   #journal button{
@@ -432,7 +438,7 @@ div.gesture-container {
 
      .notegasstation p{
   font-size: 16px;
-  left: 0px;
+  left: -300px;
   width: 60%;
 
   }
