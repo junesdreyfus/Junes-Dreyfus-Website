@@ -230,8 +230,9 @@ div.gesture-container {
   width: 90%
  }
 
-  #journal img{
-  width: 70%
+ #journal p{
+   min-width: 90%;
+   margin-left : 5%;
  }
 
  #journal button{
@@ -425,6 +426,8 @@ div.gesture-container {
  #journal p{
   font-size: 16px;
    min-width: 60%;
+   
+   margin-left : 1%;
  }
 
   #journal button{
