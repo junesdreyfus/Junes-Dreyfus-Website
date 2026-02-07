@@ -131,13 +131,14 @@ div.cartelwork {
   
 }
 
-div.gesture-container {
+div.gesture {
   margin-left: 15%;
   height: 80vh;
   /* white-space: nowrap;
   overflow: scroll; */
   width: 80vw;
 }
+
 
 .gesture img {
 
@@ -152,10 +153,29 @@ div.gesture-container {
   transition: opacity 0.2s ease-in-out;
 }
 
+.gesture p{
+  overflow-wrap:anywhere;
+  position:absolute;
+  left: 0px;
+
+     color: rgb(227, 224, 64);
+
+    font-size: 15px;
+    font-family: 'freeMono', monospace;
+    max-width: 12vw;
+    min-width: 12vw;
+    line-height: 1.5;
+    text-align: left;
+    overflow: hidden;
+ 
+}
+
 .gesture img:hover {
   opacity:0.3;
   transition: opacity 0.1s ease-in-out;
 }
+
+
 
 .hover-text{
   opacity: 0;
@@ -391,7 +411,7 @@ div.cartelworkcontainer{
   overflow-x: hidden;
   height: 65vh;
 }
-div.gesture-container {
+div.gesture {
   margin-left: 2%;
   height: 60vh;
   overflow-x: scroll;
