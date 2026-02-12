@@ -100,6 +100,13 @@ div.scroll-container img {
   width: 30%;
   min-width: 400px;
   height: 15%;
+  margin-left: 0%;
+}
+
+div.scroll-container iframe {
+   width:30vw;
+   height:30vh;
+    min-width:600px;
 }
 
 
