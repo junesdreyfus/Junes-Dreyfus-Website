@@ -15,9 +15,6 @@ header{
     margin-top: 0px; 
     margin-left: 0%; 
     cursor: cell;
-    
-  
-    
    }
 
 
@@ -258,6 +255,8 @@ div.gesture {
  }
 
  #journal p{
+   font-family: "Times New Roman", Times, serif;
+   color: #FFFFFF;
    min-width: 90%;
    margin-left : 5%;
  }
