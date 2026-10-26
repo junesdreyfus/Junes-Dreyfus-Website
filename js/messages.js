@@ -14,3 +14,7 @@ function rentrerchezsoi() {
 function flipyourphone() {
     alert("Hello, this website is better if your phone is flipped horizontally \nbut don't let me stop you");
 }
+
+function submission() {
+    alert("To submit a sound, any sound, email me at junes.dreyfus@gmail.com, with <i>riverbed</i> in the mailing subject. Thank you !");
+}

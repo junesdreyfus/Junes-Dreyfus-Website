@@ -380,6 +380,35 @@ a:hover {
        top:50%
   }
 
+.river p{
+  position:relative;
+      white-space: nowrap;
+    overflow: hidden;
+  top:0%;
+  margin-left: 25%; 
+  z-index: 1;
+  font-size:xx-large;
+  font-family: 'Times New Roman',
+    Times, serif;
+  color:rgb(109, 184, 149)
+}
+
+body .sublovestreams{
+    background-color:rgb(226, 230, 166);
+    font-family: 'Roboto', sans-serif;
+    cursor: crosshair;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+.aiguille{
+  width:100vw;
+  height:20px;
+  background-color: rgb(128, 130, 100);
+  position: relative;
+}
+
 @media (max-width: 600px) {
   
   p{
@@ -488,6 +517,10 @@ div.gesture {
   .doodle img{
        position:relative;
        right:0%
+  }
+
+  .river p{
+    font-size:medium;
   }
 
  }
